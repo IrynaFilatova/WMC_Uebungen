@@ -1,0 +1,410 @@
+
+/* =========================
+   GENERAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background-color: #FAF9F6;
+    color: #51483D;
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    background-color: #FAF9F6;
+    border-bottom: 1px solid #EAE5DC;
+}
+
+.header-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 25px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+
+.navigation {
+    display: flex;
+    gap: 35px;
+}
+
+.navigation a {
+    font-size: 13px;
+    color: #766C60;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #B29C80;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            rgba(40, 35, 28, 0.15),
+            rgba(40, 35, 28, 0.15)
+        ),
+        url("images/hero.jpg") center/cover no-repeat;
+
+    text-align: center;
+    color: #fff;
+    padding: 60px 20px;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero-label {
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(42px, 6vw, 76px);
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 550px;
+    margin: 0 auto 35px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 15px 35px;
+
+    border: 1px solid #fff;
+    color: #fff;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #fff;
+    color: #51483D;
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 90px 30px;
+    text-align: center;
+}
+
+.section-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #A7957C;
+    margin-bottom: 20px;
+}
+
+.section-container h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.section-description {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #857C70;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   CATALOG
+========================= */
+
+.catalog {
+    background-color: #F1EDE5;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background-color: #FAF9F6;
+}
+
+.about p {
+    color: #857C70;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background-color: #EAE5DC;
+    padding: 30px;
+    text-align: center;
+    color: #766C60;
+    font-size: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    .header-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .navigation {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navigation a {
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .section-container {
+        padding: 60px 20px;
+    }
+
+    .section-container h2 {
+        font-size: 32px;
+    }
+
+}
+/* Ingredients Catalog */
+
+.ingredients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 280px));
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.ingredient-card {
+    background-color: #faf9f6;
+    border: 1px solid #e8e3da;
+    border-radius: 4px;
+    padding: 30px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ingredient-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(70, 60, 45, 0.08);
+}
+
+.ingredient-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.ingredient-category {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #8b907c;
+}
+
+.ingredient-icon {
+    color: #a6a58e;
+    font-size: 20px;
+}
+
+.ingredient-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: 400;
+    color: #51483e;
+    margin-bottom: 12px;
+}
+
+.ingredient-description {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #81796e;
+    margin-bottom: 25px;
+}
+
+.ingredient-type {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #a39a8c;
+    border-top: 1px solid #e8e3da;
+    padding-top: 15px;
+}
+/* Search */
+
+.search-container {
+    margin: 30px auto;
+    max-width: 400px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #e8e3da;
+    background-color: #faf9f6;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-container input:focus {
+    border-color: #a6a58e;
+}
+
+.search-container input::placeholder {
+    color: #a39a8c;
+}
+/* Add Ingredient Form */
+
+#ingredient-form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #f5f2eb;
+    border-radius: 8px;
+}
+
+#ingredient-form input,
+#ingredient-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #d8d2c6;
+    border-radius: 4px;
+    background-color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+#ingredient-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+#ingredient-form button {
+    padding: 13px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #7b8069;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#ingredient-form button:hover {
+    background-color: #626951;
+}
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .ingredients-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #ingredient-form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ingredients-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #ingredient-form {
+        margin: 25px auto;
+        padding: 15px;
+    }
+}
+.delete-button {
+    margin-top: 15px;
+    padding: 9px 16px;
+    border: 1px solid #b8aa9a;
+    border-radius: 4px;
+    background: transparent;
+    color: #77695d;
+    font-family: inherit;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #77695d;
+    color: white;
+}

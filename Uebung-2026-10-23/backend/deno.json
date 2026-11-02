@@ -1,0 +1,9 @@
+{
+  "tasks": {
+    "dev": "deno run --watch --allow-net --allow-read --allow-write src/server.ts"
+  },
+  "imports": {
+    "@libsql/client": "npm:@libsql/client@^0.18.0",
+    "drizzle-orm": "npm:drizzle-orm@^0.45.4"
+  }
+}

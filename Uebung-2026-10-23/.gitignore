@@ -1,0 +1,11 @@
+# Local database
+**/local.db
+**/local.db-shm
+**/local.db-wal
+
+# Environment files
+.env
+.env.*
+
+# Dependencies
+node_modules/

@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Scent Archive</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+
+            <a href="index.html" class="logo">
+                THE SCENT ARCHIVE
+            </a>
+
+            <nav class="navigation">
+                <a href="#home">Home</a>
+                <a href="#families">Fragrance Families</a>
+                <a href="#catalog">Catalog</a>
+                <a href="#about">About</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- Main -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <p class="hero-label">THE WORLD OF PERFUMERY</p>
+
+                <h1>
+                    Discover the Art<br>
+                    of Fragrance
+                </h1>
+
+                <p class="hero-description">
+                    Explore the world of natural essences,
+                    aromatic materials and modern fragrance molecules.
+                </p>
+
+                <a href="#families" class="hero-button">
+                    Explore Collection
+                </a>
+
+            </div>
+
+        </section>
+
+       <!-- Catalog -->
+<section class="catalog" id="catalog">
+
+    <div class="section-container">
+
+        <h2>Our Collection</h2>
+        <div class="search-container">
+    <input
+        type="text"
+        id="search-input"
+        placeholder="Search ingredients..."
+    >
+</div>
+<form id="ingredient-form">
+    <input
+        type="text"
+        id="ingredient-name"
+        placeholder="Ingredient name"
+        required
+    >
+
+    <input
+        type="text"
+        id="ingredient-category"
+        placeholder="Category"
+        required
+    >
+
+    <input
+        type="text"
+        id="ingredient-type"
+        placeholder="Natural or Synthetic"
+        required
+    >
+
+    <textarea
+        id="ingredient-description"
+        placeholder="Description"
+        required
+    ></textarea>
+
+    <button type="submit">Add Ingredient</button>
+</form>
+
+        <div class="ingredients-grid" id="ingredients-grid">
+
+        </div>
+
+    </div>
+
+</section>
+
+      <!-- About -->
+<section class="about" id="about">
+
+    <div class="section-container">
+
+        <h2>About The Scent Archive</h2>
+
+        <p>
+            The Scent Archive is a curated collection of
+            natural and synthetic fragrance ingredients.
+            Explore their unique characteristics, discover
+            different scent profiles and learn more about
+            the art of perfumery.
+        </p>
+
+    </div>
+
+</section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <p>© 2026 The Scent Archive</p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+
+</body>
+</html>
